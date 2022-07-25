@@ -1,0 +1,30 @@
+{% extends "plantillas/index.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+        <ul>
+        {% for p in prod %}
+
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Producto</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Detalle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">{{p.id}}</th>
+                <td>{{p.name_of_product}}</td>
+                <td>{{p.price}}</td>
+                <td>{{p.details}}</td>
+              </tr>
+            </tbody>
+          </table>
+
+        {% endfor %}
+        </ul>
+{% endblock %}

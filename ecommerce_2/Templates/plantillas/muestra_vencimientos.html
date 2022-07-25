@@ -1,0 +1,32 @@
+{% extends "plantillas/index.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+    <ul>
+    {% for v in vence %}
+
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre del Vencimiento</th>
+                    <th scope="col">Fecha del Vencimiento</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">{{v.id}}</th>
+                    <td>{{v.nombre}}</td>
+                    <td>{{v.fecha_vencimiento}}</td>
+                </tr>
+                </tbody>
+            </table>
+
+    {% endfor %}
+    </ul>
+    
+</body>
+</html>
+
+{% endblock %}
